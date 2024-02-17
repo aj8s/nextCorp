@@ -1,5 +1,5 @@
 const SnippetLoadingPage = () => {
-  return <div>Loading.....</div>;
+  return <div className="text-white text-xl">Loading.....</div>;
 };
 
 export default SnippetLoadingPage;

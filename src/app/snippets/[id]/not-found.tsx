@@ -1,5 +1,9 @@
 const NotFound = () => {
-  return <div>Sorry, could not found the snippet.</div>;
+  return (
+    <div className="text-white text-xl">
+      Sorry, could not found the snippet.
+    </div>
+  );
 };
 
 export default NotFound;
