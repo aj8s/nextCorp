@@ -27,10 +27,10 @@ const SnippetCreate = () => {
 
   return (
     <form action={createSnippet}>
-      <h1 className="font-bold m-3">Create Snippet</h1>
+      <h1 className="font-bold m-3 text-white">Create Snippet</h1>
       <div className="flex flex-col gap-4 mt-2">
         <div className="flex gap-4">
-          <label htmlFor="title" className="w-12">
+          <label htmlFor="title" className="w-12 text-white">
             Title
           </label>
           <input
@@ -43,7 +43,7 @@ const SnippetCreate = () => {
       </div>
       <div className="flex flex-col gap-4 mt-2">
         <div className="flex gap-4">
-          <label htmlFor="code" className="w-12">
+          <label htmlFor="code" className="w-12 text-white">
             Code
           </label>
           <textarea
@@ -53,8 +53,11 @@ const SnippetCreate = () => {
           />
         </div>
       </div>
-      <button type="submit" className="bg-blue-300 ml-12 rounded p-3 mt-2">
-        Create`
+      <button
+        type="submit"
+        className="bg-blue-300 text-black font-bold ml-12 rounded p-3 mt-2"
+      >
+        Create
       </button>
     </form>
   );

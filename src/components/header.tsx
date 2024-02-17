@@ -5,13 +5,12 @@ const Header = () => {
     <div className="w-full absolute text-white z-10">
       <nav className="container relative flex flex-wrap items-center justify-between mx-auto p-8">
         <Link href="/" className="font-bold text-3xl">
-          Home
+          NextCorp
         </Link>
         <div className="space-x-4 text-xl">
-          <Link href="/snippets">Code Snippets</Link>
-          <Link href="/performance">Performance</Link>
-          <Link href="/reliability">Realiability</Link>
-          <Link href="/scale">Scale</Link>
+          <Link href="/cloud/performance">Performance</Link>
+          <Link href="/cloud/reliability">Realiability</Link>
+          <Link href="/cloud/scale">Scale</Link>
         </div>
       </nav>
     </div>

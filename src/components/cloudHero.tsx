@@ -7,7 +7,7 @@ interface HeroProps {
   title: string;
 }
 
-export default function Hero(props: HeroProps) {
+export default function CloudHero(props: HeroProps) {
   return (
     <div className="relative h-screen">
       <div className="absolute -z-10 inset-0">
