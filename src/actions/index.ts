@@ -21,3 +21,41 @@ export async function deleteSnippet(id: number) {
 
   redirect("/snippets");
 }
+
+// A function that  will be call when user fills the form
+export const createSnippet = async (
+  formState: { message: string },
+  formData: FormData
+) => {
+  try {
+    // Validate the user's input
+    const title = formData.get("title");
+    const code = formData.get("code");
+
+    // sample Validation
+    if (typeof title !== "string" || title.length < 3) {
+      return { message: "You must enter valid title" };
+    }
+
+    if (typeof code !== "string" || code.length < 7) {
+      return { message: "You must enter valid code" };
+    }
+
+    // Create the new record in db
+    await db.snippet.create({
+      data: {
+        title,
+        code,
+      },
+    });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return { message: error.message };
+    } else {
+      return { message: "Something went wrong" };
+    }
+  }
+
+  // Redirect users to  the home page
+  redirect("/snippets");
+};
