@@ -1,6 +1,7 @@
 "use server";
 
 import { db } from "@/db";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function editSnippet(id: number, code: string) {
@@ -19,6 +20,7 @@ export async function deleteSnippet(id: number) {
     where: { id },
   });
 
+  revalidatePath("/snippets");
   redirect("/snippets");
 }
 
@@ -56,6 +58,7 @@ export const createSnippet = async (
     }
   }
 
+  revalidatePath("/snippets");
   // Redirect users to  the home page
   redirect("/snippets");
 };

@@ -57,3 +57,12 @@ npm install @monaco-editor/react
 
 
 ```
+
+## Caching mechanisms
+
+- Time-Based caching
+  - E.g. Home page of a social
+- On-Demand cachine
+  - constantly updated list view, route validation like our /snippets route everytime some create/edit/delete the snippet update the page
+- Disable caching
+  - Whne we want users to see update the data all time

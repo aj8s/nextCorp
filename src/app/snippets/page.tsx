@@ -2,6 +2,9 @@ import SnippetHeader from "@/components/snippetHeader";
 import { db } from "@/db";
 import Link from "next/link";
 
+// Disables cachich entirely
+// export const dynamic = "force-dynamic";
+
 const SnippetHome = async () => {
   // fetch all snippets using prisma client
   const snippets = await db.snippet.findMany();
