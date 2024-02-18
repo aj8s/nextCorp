@@ -35,9 +35,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Important Commands
+## Important Packages and Commands
 
-Prisma
+### Prisma
 
 ```bash
 npm install prisma
@@ -46,4 +46,14 @@ npx prisma migrate dev
 
 # Your package.json may need to the following build step
 # "build": "prisma generate && next build",
+
+```
+
+### Other packages
+
+```bash
+# Monaco Editor package
+npm install @monaco-editor/react
+
+
 ```

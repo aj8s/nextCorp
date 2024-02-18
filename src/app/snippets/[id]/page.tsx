@@ -1,6 +1,8 @@
 import { db } from "@/db";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import * as actions from "@/actions";
+
 interface ShowSnippetPageProps {
   params: {
     id: string;
@@ -24,6 +26,9 @@ const ShowSnippetPage = async (props: ShowSnippetPageProps) => {
   if (!snippet) {
     return notFound();
   }
+
+  const deleteSnippetAction = actions.deleteSnippet.bind(null, snippet.id);
+
   // Display the value
   return (
     <div className="text-white">
@@ -36,7 +41,9 @@ const ShowSnippetPage = async (props: ShowSnippetPageProps) => {
           >
             Edit
           </Link>
-          <button className="border rounded p-2">Delete</button>
+          <form action={deleteSnippetAction}>
+            <button className="border rounded p-2">Delete</button>
+          </form>
         </div>
       </div>
       <pre className="m-4 border rounded-lg border-slate-700 bg-gradient-to-r from-slate-800 p-3 font-mon0 text-lg">
