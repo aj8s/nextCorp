@@ -66,3 +66,19 @@ npm install @monaco-editor/react
   - constantly updated list view, route validation like our /snippets route everytime some create/edit/delete the snippet update the page
 - Disable caching
   - Whne we want users to see update the data all time
+
+## How to start setting up app
+
+1. Decide the auth provider
+2. Decide the styling provider with Tailwind e.g. nextUI / shadcn / daisyUI
+3. Decide the database engine
+4. Follow **Recommended Initial Design**
+
+## Recommended Initial Design
+
+1. Identify all different routes in your app + the data each page shows
+2. Make path helper function
+3. Create your routing folders + page.tsx based on page # 1
+4. Identify the places where data changes in your app
+5. Make empty server actions for each of those.
+6. Add in comments on what path you will need to revalidate for each server action
