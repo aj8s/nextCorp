@@ -66,3 +66,12 @@ npm install @monaco-editor/react
   - constantly updated list view, route validation like our /snippets route everytime some create/edit/delete the snippet update the page
 - Disable caching
   - Whne we want users to see update the data all time
+
+## NexUI
+
+```bash
+npm install@nextui-org/react framer-motion
+
+https://github.com/settings/applications/new
+
+```
