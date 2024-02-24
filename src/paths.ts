@@ -15,3 +15,5 @@ const paths = {
     return `/topics/${topicSlug}/posts/${postId}`;
   },
 };
+
+export default paths;

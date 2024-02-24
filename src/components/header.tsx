@@ -32,6 +32,7 @@ export default function Header() {
             }}
             placeholder="Type to search..."
             size="sm"
+            // TODO: Implement the Search Icon
             //   startContent={<SearchIcon size={18} />}
             type="search"
           />
