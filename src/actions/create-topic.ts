@@ -2,11 +2,12 @@
 
 import type { Topic } from "@prisma/client";
 import { auth } from "@/auth";
-import { z } from "zod";
+import { promise, z } from "zod";
 import { redirect } from "next/navigation";
 import { db } from "@/db";
 import paths from "@/paths";
 import { revalidatePath } from "next/cache";
+import { resolve } from "path";
 
 const createTopicSchema = z.object({
   name: z
@@ -33,6 +34,9 @@ export async function createTopic(
   // const name = formData.get("name");
   // const description = formData.get("description");
   // console.log(name, description);
+
+  // Added an explicit timeout to test the loading functionality
+  await new Promise((resolve) => setTimeout(resolve, 2500));
 
   const result = createTopicSchema.safeParse({
     name: formData.get("name"),
